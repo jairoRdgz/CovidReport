@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,12 +13,13 @@ using GMap.NET;
 using GMap.NET.MapProviders;
 using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
+using Taller_2.model;
 
 namespace Taller_2
 {
     public partial class UserInterface : Form
     {
-
+        DatoList list = new DatoList();
         GMarkerGoogle marker;
         GMapOverlay markerOverlay;
         DataTable table;
@@ -25,6 +27,32 @@ namespace Taller_2
         public UserInterface()
         {
             InitializeComponent();
+            initializeTable();
+        }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                //
+                path.Text = openFileDialog1.FileName;
+
+                loadData(openFileDialog1.FileName);
+            }
+        }
+
+        public void loadData(string a)
+        {
+            String[] lineas = File.ReadAllLines(a);
+
+            for (int i = 1; i < lineas.Length; i++)
+            {
+                String[] valores = lineas[i].Split(',');
+
+                list.addDato(new Dato(valores[3], valores[4], valores[5], valores[6], valores[7]));
+            }
+            fill();
         }
 
         private void UserInterface_Load(object sender, EventArgs e)
@@ -37,6 +65,32 @@ namespace Taller_2
             gMapControl1.MaxZoom = 24;
             gMapControl1.Zoom = 6;
             gMapControl1.AutoScroll = true;
+        }
+
+        public void initializeTable()
+        {
+            table = new DataTable();
+            table.Columns.Add("CIUDAD");
+            table.Columns.Add("DEPARTAMENTO");
+            table.Columns.Add("ATENCION");
+            table.Columns.Add("EDAD");
+            table.Columns.Add("SEXO");
+            tablaDatos.DataSource = table;
+        }
+
+        public void fill()
+        {
+            foreach (var item in list.getDatos())
+            {
+                DataRow row = table.NewRow();
+                row[0] = item.getCiudad();
+                row[1] = item.getDepartamento();
+                row[2] = item.getAtencion();
+                row[3] = item.getEdad();
+                row[4] = item.getSexo();
+
+                table.Rows.Add(row);
+            }
         }
     }
 }

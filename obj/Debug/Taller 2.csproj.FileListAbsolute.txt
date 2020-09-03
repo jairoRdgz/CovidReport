@@ -23,3 +23,28 @@ C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Taller 2\obj\Debug\Taller 2.csproj
 C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Taller 2\obj\Debug\Taller 2.csproj.CopyComplete
 C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Taller 2\obj\Debug\Taller 2.exe
 C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Taller 2\obj\Debug\Taller 2.pdb
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Covid Reporter\bin\Debug\Taller 2.exe.config
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Covid Reporter\bin\Debug\Taller 2.exe
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Covid Reporter\bin\Debug\Taller 2.pdb
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Covid Reporter\bin\Debug\EntityFramework.dll
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Covid Reporter\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Covid Reporter\bin\Debug\GMap.NET.Core.dll
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Covid Reporter\bin\Debug\GMap.NET.WindowsForms.dll
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Covid Reporter\bin\Debug\GMap.NET.WindowsPresentation.dll
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Covid Reporter\bin\Debug\Newtonsoft.Json.dll
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Covid Reporter\bin\Debug\System.Data.SQLite.dll
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Covid Reporter\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Covid Reporter\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Covid Reporter\bin\Debug\EntityFramework.xml
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Covid Reporter\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Covid Reporter\bin\Debug\Newtonsoft.Json.xml
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Covid Reporter\bin\Debug\System.Data.SQLite.xml
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Covid Reporter\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Covid Reporter\obj\Debug\Taller 2.csprojAssemblyReference.cache
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Covid Reporter\obj\Debug\Taller_2.UserInterface.resources
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Covid Reporter\obj\Debug\Taller_2.Properties.Resources.resources
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Covid Reporter\obj\Debug\Taller 2.csproj.GenerateResource.cache
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Covid Reporter\obj\Debug\Taller 2.csproj.CoreCompileInputs.cache
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Covid Reporter\obj\Debug\Taller 2.csproj.CopyComplete
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Covid Reporter\obj\Debug\Taller 2.exe
+C:\Users\rdgz\Desktop\WorkSpaces\C# WorkSpace\Covid Reporter\obj\Debug\Taller 2.pdb

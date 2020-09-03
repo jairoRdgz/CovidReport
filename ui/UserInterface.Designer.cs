@@ -37,6 +37,8 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.from = new System.Windows.Forms.Label();
             this.to = new System.Windows.Forms.Label();
+            this.btnLoad = new System.Windows.Forms.Button();
+            this.path = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,14 +106,14 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(761, 12);
+            this.textBox2.Location = new System.Drawing.Point(761, 61);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(89, 20);
             this.textBox2.TabIndex = 5;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(614, 12);
+            this.textBox3.Location = new System.Drawing.Point(614, 61);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(89, 20);
             this.textBox3.TabIndex = 6;
@@ -119,7 +121,7 @@
             // from
             // 
             this.from.AutoSize = true;
-            this.from.Location = new System.Drawing.Point(578, 15);
+            this.from.Location = new System.Drawing.Point(578, 64);
             this.from.Name = "from";
             this.from.Size = new System.Drawing.Size(33, 13);
             this.from.TabIndex = 7;
@@ -128,17 +130,37 @@
             // to
             // 
             this.to.AutoSize = true;
-            this.to.Location = new System.Drawing.Point(732, 15);
+            this.to.Location = new System.Drawing.Point(732, 64);
             this.to.Name = "to";
             this.to.Size = new System.Drawing.Size(23, 13);
             this.to.TabIndex = 8;
             this.to.Text = "To:";
+            // 
+            // btnLoad
+            // 
+            this.btnLoad.Location = new System.Drawing.Point(581, 12);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(97, 23);
+            this.btnLoad.TabIndex = 9;
+            this.btnLoad.Text = "Cargar Datos";
+            this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            // 
+            // path
+            // 
+            this.path.AutoSize = true;
+            this.path.Location = new System.Drawing.Point(699, 17);
+            this.path.Name = "path";
+            this.path.Size = new System.Drawing.Size(0, 13);
+            this.path.TabIndex = 10;
             // 
             // UserInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1025, 450);
+            this.Controls.Add(this.path);
+            this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.to);
             this.Controls.Add(this.from);
             this.Controls.Add(this.textBox3);
@@ -168,6 +190,8 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label from;
         private System.Windows.Forms.Label to;
+        private System.Windows.Forms.Button btnLoad;
+        private System.Windows.Forms.Label path;
     }
 }
 
