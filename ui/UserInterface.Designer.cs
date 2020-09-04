@@ -105,7 +105,7 @@
             // 
             // cadena
             // 
-            this.cadena.Location = new System.Drawing.Point(578, 87);
+            this.cadena.Location = new System.Drawing.Point(578, 113);
             this.cadena.Name = "cadena";
             this.cadena.Size = new System.Drawing.Size(272, 20);
             this.cadena.TabIndex = 4;

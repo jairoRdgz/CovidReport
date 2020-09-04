@@ -124,16 +124,20 @@ namespace Taller_2
             {
                 case "Ciudad":
                     cadena.Show();
+                    cadena.Clear();
                     categorico.Hide();
                     ciudadChoosen = true;
                     break;
                 case "Departamento":
                     cadena.Show();
+                    cadena.Clear();
                     categorico.Hide();
                     ciudadChoosen = false;
                     break;
                 case "Atencion":
                     chooseSexo = false;
+                    cadena.Hide();
+                    cadena.Clear();
                     categorico.Show();
                     categorico.Items.Clear();
                     fillAtencion();
@@ -143,6 +147,8 @@ namespace Taller_2
                     break;
                 case "Sexo":
                     chooseSexo = true;
+                    cadena.Hide();
+                    cadena.Clear();
                     categorico.Show();
                     categorico.Items.Clear();
                     fillSexo();
@@ -150,6 +156,8 @@ namespace Taller_2
                 default:
                     categorico.Hide();
                     categorico.Items.Clear();
+                    cadena.Hide();
+                    cadena.Clear();
                     break;
             }
         }
