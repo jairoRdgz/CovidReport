@@ -25,6 +25,7 @@ namespace Taller_2
         DataTable table;
         bool chooseSexo = false;
         bool ciudadChoosen = false;
+        GMapOverlay markers = new GMapOverlay("markers");
 
         public UserInterface()
         {
@@ -62,14 +63,14 @@ namespace Taller_2
 
         private void UserInterface_Load(object sender, EventArgs e)
         {
-            gMapControl1.DragButton = MouseButtons.Left;
-            gMapControl1.CanDragMap = true;
-            gMapControl1.MapProvider = GMapProviders.GoogleMap;
-            gMapControl1.Position = new PointLatLng(4.570868, -74.297333);
-            gMapControl1.MinZoom = 0;
-            gMapControl1.MaxZoom = 24;
-            gMapControl1.Zoom = 6;
-            gMapControl1.AutoScroll = true;
+            gMap.DragButton = MouseButtons.Left;
+            gMap.CanDragMap = true;
+            gMap.MapProvider = GMapProviders.GoogleMap;
+            gMap.Position = new PointLatLng(4.570868, -74.297333);
+            gMap.MinZoom = 0;
+            gMap.MaxZoom = 24;
+            gMap.Zoom = 6;
+            gMap.AutoScroll = true;
         }
 
         public void initializeTable()
@@ -96,6 +97,7 @@ namespace Taller_2
 
                 table.Rows.Add(row);
             }
+            list.setCiudades();
         }
 
         private void fillAtencion()
@@ -137,7 +139,7 @@ namespace Taller_2
                     fillAtencion();
                     break;
                 case "Edad":
-
+                    //Uds Veran como demonios hacen esta
                     break;
                 case "Sexo":
                     chooseSexo = true;
@@ -175,6 +177,29 @@ namespace Taller_2
                 table.DefaultView.RowFilter = $"DEPARTAMENTO LIKE '{cadena.Text}%'";
             }
             
+        }
+
+        private void agregarInfectados_Click(object sender, EventArgs e)
+        {
+            List<string> lista = list.getCiudades();
+
+            foreach (string f in lista)
+            {
+                GeoCoderStatusCode statusCode;
+                PointLatLng? pointLatLng1 = OpenStreet4UMapProvider.Instance.GetPoint(f, out statusCode);
+
+                if (pointLatLng1 != null)
+                {
+                    GMapMarker marker00 = new GMarkerGoogle(new PointLatLng(pointLatLng1.Value.Lat, pointLatLng1.Value.Lng), GMarkerGoogleType.blue_dot);
+                    marker00.ToolTipText = f + "\n" + pointLatLng1.Value.Lat + "\n" + pointLatLng1.Value.Lng; // Esta linea es solo apariencia
+                    markers.Markers.Add(marker00);
+                }
+            }
+        }
+
+        private void gMapControl1_Load(object sender, EventArgs e)
+        {
+            gMap.Overlays.Add(markers);
         }
     }
 }

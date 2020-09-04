@@ -10,8 +10,7 @@ namespace Taller_2.model
     {
         private List<Dato> datos;
 
-        private List<string> atencion;
-
+        private List<string> ciudades;
 
         public DatoList()
         {
@@ -31,6 +30,25 @@ namespace Taller_2.model
         public void setDatos(List<Dato> a)
         {
             this.datos = a;
+        }
+
+        public List<string> getCiudades()
+        {
+            return ciudades;
+        }
+
+        public void setCiudades()
+        {
+            ciudades = new List<string>();
+            foreach (var item in datos)
+            {
+                if (!ciudades.Contains(item.getCiudad()))
+                {
+                    ciudades.Add(item.getCiudad()+", Colombia");
+                }
+            }
+            ciudades.Sort();
+
         }
 
     }

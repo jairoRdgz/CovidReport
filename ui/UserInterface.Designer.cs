@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gMapControl1 = new GMap.NET.WindowsForms.GMapControl();
+            this.gMap = new GMap.NET.WindowsForms.GMapControl();
             this.tablaDatos = new System.Windows.Forms.DataGridView();
             this.campos = new System.Windows.Forms.ComboBox();
             this.categorico = new System.Windows.Forms.ComboBox();
@@ -39,34 +39,36 @@
             this.to = new System.Windows.Forms.Label();
             this.btnLoad = new System.Windows.Forms.Button();
             this.path = new System.Windows.Forms.Label();
+            this.agregarInfectados = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDatos)).BeginInit();
             this.SuspendLayout();
             // 
-            // gMapControl1
+            // gMap
             // 
-            this.gMapControl1.Bearing = 0F;
-            this.gMapControl1.CanDragMap = true;
-            this.gMapControl1.EmptyTileColor = System.Drawing.Color.Navy;
-            this.gMapControl1.GrayScaleMode = false;
-            this.gMapControl1.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
-            this.gMapControl1.LevelsKeepInMemory = 5;
-            this.gMapControl1.Location = new System.Drawing.Point(12, 12);
-            this.gMapControl1.MarkersEnabled = true;
-            this.gMapControl1.MaxZoom = 2;
-            this.gMapControl1.MinZoom = 2;
-            this.gMapControl1.MouseWheelZoomEnabled = true;
-            this.gMapControl1.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
-            this.gMapControl1.Name = "gMapControl1";
-            this.gMapControl1.NegativeMode = false;
-            this.gMapControl1.PolygonsEnabled = true;
-            this.gMapControl1.RetryLoadTile = 0;
-            this.gMapControl1.RoutesEnabled = true;
-            this.gMapControl1.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
-            this.gMapControl1.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
-            this.gMapControl1.ShowTileGridLines = false;
-            this.gMapControl1.Size = new System.Drawing.Size(560, 426);
-            this.gMapControl1.TabIndex = 0;
-            this.gMapControl1.Zoom = 0D;
+            this.gMap.Bearing = 0F;
+            this.gMap.CanDragMap = true;
+            this.gMap.EmptyTileColor = System.Drawing.Color.Navy;
+            this.gMap.GrayScaleMode = false;
+            this.gMap.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
+            this.gMap.LevelsKeepInMemory = 5;
+            this.gMap.Location = new System.Drawing.Point(12, 12);
+            this.gMap.MarkersEnabled = true;
+            this.gMap.MaxZoom = 2;
+            this.gMap.MinZoom = 2;
+            this.gMap.MouseWheelZoomEnabled = true;
+            this.gMap.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
+            this.gMap.Name = "gMap";
+            this.gMap.NegativeMode = false;
+            this.gMap.PolygonsEnabled = true;
+            this.gMap.RetryLoadTile = 0;
+            this.gMap.RoutesEnabled = true;
+            this.gMap.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
+            this.gMap.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
+            this.gMap.ShowTileGridLines = false;
+            this.gMap.Size = new System.Drawing.Size(560, 426);
+            this.gMap.TabIndex = 0;
+            this.gMap.Zoom = 0D;
+            this.gMap.Load += new System.EventHandler(this.gMapControl1_Load);
             // 
             // tablaDatos
             // 
@@ -159,11 +161,22 @@
             this.path.Size = new System.Drawing.Size(0, 13);
             this.path.TabIndex = 10;
             // 
+            // agregarInfectados
+            // 
+            this.agregarInfectados.Location = new System.Drawing.Point(899, 75);
+            this.agregarInfectados.Name = "agregarInfectados";
+            this.agregarInfectados.Size = new System.Drawing.Size(100, 23);
+            this.agregarInfectados.TabIndex = 11;
+            this.agregarInfectados.Text = "Ubicar Infectados";
+            this.agregarInfectados.UseVisualStyleBackColor = true;
+            this.agregarInfectados.Click += new System.EventHandler(this.agregarInfectados_Click);
+            // 
             // UserInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1025, 450);
+            this.Controls.Add(this.agregarInfectados);
             this.Controls.Add(this.cadena);
             this.Controls.Add(this.path);
             this.Controls.Add(this.btnLoad);
@@ -174,7 +187,7 @@
             this.Controls.Add(this.categorico);
             this.Controls.Add(this.campos);
             this.Controls.Add(this.tablaDatos);
-            this.Controls.Add(this.gMapControl1);
+            this.Controls.Add(this.gMap);
             this.Name = "UserInterface";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.UserInterface_Load);
@@ -186,7 +199,7 @@
 
         #endregion
 
-        private GMap.NET.WindowsForms.GMapControl gMapControl1;
+        private GMap.NET.WindowsForms.GMapControl gMap;
         private System.Windows.Forms.DataGridView tablaDatos;
         private System.Windows.Forms.ComboBox campos;
         private System.Windows.Forms.ComboBox categorico;
@@ -197,6 +210,7 @@
         private System.Windows.Forms.Label to;
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Label path;
+        private System.Windows.Forms.Button agregarInfectados;
     }
 }
 
