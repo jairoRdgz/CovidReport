@@ -10,6 +10,8 @@ namespace Taller_2.model
     {
         private List<Dato> datos;
 
+        private List<string> atencion;
+
 
         public DatoList()
         {
@@ -30,5 +32,6 @@ namespace Taller_2.model
         {
             this.datos = a;
         }
+
     }
 }

@@ -23,11 +23,13 @@ namespace Taller_2
         GMarkerGoogle marker;
         GMapOverlay markerOverlay;
         DataTable table;
+        bool chooseSexo = false;
 
         public UserInterface()
         {
             InitializeComponent();
             initializeTable();
+            categorico.Hide();
         }
 
         private void btnLoad_Click(object sender, EventArgs e)
@@ -53,6 +55,7 @@ namespace Taller_2
                 list.addDato(new Dato(valores[3], valores[4], valores[5], valores[6], valores[7]));
             }
             fill();
+
         }
 
         private void UserInterface_Load(object sender, EventArgs e)
@@ -90,6 +93,68 @@ namespace Taller_2
                 row[4] = item.getSexo();
 
                 table.Rows.Add(row);
+            }
+        }
+
+        private void fillAtencion()
+        {
+            categorico.Items.Add("Recuperado");
+            categorico.Items.Add("Casa");
+            categorico.Items.Add("Hospital");
+            categorico.Items.Add("Fallecido");
+            categorico.Items.Add("Hospital UCI");
+            categorico.Items.Add("N/A");
+        }
+
+        private void fillSexo()
+        {
+            categorico.Items.Add("M");
+            categorico.Items.Add("F");
+        }
+
+        private void campos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string cases = campos.Text;
+
+            switch (cases)
+            {
+                case "Ciudad":
+                    
+                    break;
+                case "Departamento":
+                    
+                    break;
+                case "Atencion":
+                    chooseSexo = false;
+                    categorico.Show();
+                    categorico.Items.Clear();
+                    fillAtencion();
+                    break;
+                case "Edad":
+
+                    break;
+                case "Sexo":
+                    chooseSexo = true;
+                    categorico.Show();
+                    categorico.Items.Clear();
+                    fillSexo();
+                    break;
+                default:
+                    categorico.Hide();
+                    categorico.Items.Clear();
+                    break;
+            }
+        }
+
+        private void categorico_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (chooseSexo)
+            {
+                table.DefaultView.RowFilter = $"SEXO LIKE '{categorico.Text}%'";
+            }
+            else
+            {
+                table.DefaultView.RowFilter = $"ATENCION LIKE '{categorico.Text}%'";
             }
         }
     }

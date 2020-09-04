@@ -30,7 +30,7 @@
         {
             this.gMapControl1 = new GMap.NET.WindowsForms.GMapControl();
             this.tablaDatos = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.campos = new System.Windows.Forms.ComboBox();
             this.categorico = new System.Windows.Forms.ComboBox();
             this.cadena = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -76,18 +76,21 @@
             this.tablaDatos.Size = new System.Drawing.Size(435, 298);
             this.tablaDatos.TabIndex = 1;
             // 
-            // comboBox1
+            // campos
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.campos.FormattingEnabled = true;
+            this.campos.Items.AddRange(new object[] {
             "",
-            "Categorico",
-            "Numerico",
-            "Cadena"});
-            this.comboBox1.Location = new System.Drawing.Point(883, 113);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(130, 21);
-            this.comboBox1.TabIndex = 2;
+            "Ciudad",
+            "Departamento",
+            "Atencion",
+            "Edad",
+            "Sexo"});
+            this.campos.Location = new System.Drawing.Point(883, 113);
+            this.campos.Name = "campos";
+            this.campos.Size = new System.Drawing.Size(130, 21);
+            this.campos.TabIndex = 2;
+            this.campos.SelectedIndexChanged += new System.EventHandler(this.campos_SelectedIndexChanged);
             // 
             // categorico
             // 
@@ -96,6 +99,7 @@
             this.categorico.Name = "categorico";
             this.categorico.Size = new System.Drawing.Size(272, 21);
             this.categorico.TabIndex = 3;
+            this.categorico.SelectedIndexChanged += new System.EventHandler(this.categorico_SelectedIndexChanged);
             // 
             // cadena
             // 
@@ -159,15 +163,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1025, 450);
+            this.Controls.Add(this.cadena);
             this.Controls.Add(this.path);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.to);
             this.Controls.Add(this.from);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.cadena);
             this.Controls.Add(this.categorico);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.campos);
             this.Controls.Add(this.tablaDatos);
             this.Controls.Add(this.gMapControl1);
             this.Name = "UserInterface";
@@ -183,7 +187,7 @@
 
         private GMap.NET.WindowsForms.GMapControl gMapControl1;
         private System.Windows.Forms.DataGridView tablaDatos;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox campos;
         private System.Windows.Forms.ComboBox categorico;
         private System.Windows.Forms.TextBox cadena;
         private System.Windows.Forms.TextBox textBox2;
