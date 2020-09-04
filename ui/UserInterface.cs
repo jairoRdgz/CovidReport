@@ -24,12 +24,14 @@ namespace Taller_2
         GMapOverlay markerOverlay;
         DataTable table;
         bool chooseSexo = false;
+        bool ciudadChoosen = false;
 
         public UserInterface()
         {
             InitializeComponent();
             initializeTable();
             categorico.Hide();
+            cadena.Hide();
         }
 
         private void btnLoad_Click(object sender, EventArgs e)
@@ -119,10 +121,14 @@ namespace Taller_2
             switch (cases)
             {
                 case "Ciudad":
-                    
+                    cadena.Show();
+                    categorico.Hide();
+                    ciudadChoosen = true;
                     break;
                 case "Departamento":
-                    
+                    cadena.Show();
+                    categorico.Hide();
+                    ciudadChoosen = false;
                     break;
                 case "Atencion":
                     chooseSexo = false;
@@ -156,6 +162,19 @@ namespace Taller_2
             {
                 table.DefaultView.RowFilter = $"ATENCION LIKE '{categorico.Text}%'";
             }
+        }
+
+        private void cadena_TextChanged(object sender, EventArgs e)
+        {
+            if (ciudadChoosen)
+            {
+                table.DefaultView.RowFilter = $"CIUDAD LIKE '{cadena.Text}%'";
+            }
+            else
+            {
+                table.DefaultView.RowFilter = $"DEPARTAMENTO LIKE '{cadena.Text}%'";
+            }
+            
         }
     }
 }

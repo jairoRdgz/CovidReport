@@ -107,6 +107,7 @@
             this.cadena.Name = "cadena";
             this.cadena.Size = new System.Drawing.Size(272, 20);
             this.cadena.TabIndex = 4;
+            this.cadena.TextChanged += new System.EventHandler(this.cadena_TextChanged);
             // 
             // textBox2
             // 
