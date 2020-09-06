@@ -31,15 +31,15 @@
             this.gMap = new GMap.NET.WindowsForms.GMapControl();
             this.tablaDatos = new System.Windows.Forms.DataGridView();
             this.campos = new System.Windows.Forms.ComboBox();
-            this.categorico = new System.Windows.Forms.ComboBox();
-            this.cadena = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.from = new System.Windows.Forms.Label();
-            this.to = new System.Windows.Forms.Label();
             this.btnLoad = new System.Windows.Forms.Button();
             this.path = new System.Windows.Forms.Label();
             this.agregarInfectados = new System.Windows.Forms.Button();
+            this.categorico = new System.Windows.Forms.ComboBox();
+            this.cadena = new System.Windows.Forms.TextBox();
+            this.to = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.from = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,6 +94,34 @@
             this.campos.TabIndex = 2;
             this.campos.SelectedIndexChanged += new System.EventHandler(this.campos_SelectedIndexChanged);
             // 
+            // btnLoad
+            // 
+            this.btnLoad.Location = new System.Drawing.Point(596, 7);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(97, 23);
+            this.btnLoad.TabIndex = 9;
+            this.btnLoad.Text = "Cargar Archivos";
+            this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            // 
+            // path
+            // 
+            this.path.AutoSize = true;
+            this.path.Location = new System.Drawing.Point(699, 17);
+            this.path.Name = "path";
+            this.path.Size = new System.Drawing.Size(0, 13);
+            this.path.TabIndex = 10;
+            // 
+            // agregarInfectados
+            // 
+            this.agregarInfectados.Location = new System.Drawing.Point(883, 64);
+            this.agregarInfectados.Name = "agregarInfectados";
+            this.agregarInfectados.Size = new System.Drawing.Size(100, 23);
+            this.agregarInfectados.TabIndex = 11;
+            this.agregarInfectados.Text = "Ubicar Infectados";
+            this.agregarInfectados.UseVisualStyleBackColor = true;
+            this.agregarInfectados.Click += new System.EventHandler(this.agregarInfectados_Click);
+            // 
             // categorico
             // 
             this.categorico.FormattingEnabled = true;
@@ -109,67 +137,42 @@
             this.cadena.Name = "cadena";
             this.cadena.Size = new System.Drawing.Size(272, 20);
             this.cadena.TabIndex = 4;
+            this.cadena.Visible = false;
             this.cadena.TextChanged += new System.EventHandler(this.cadena_TextChanged);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(761, 61);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(89, 20);
-            this.textBox2.TabIndex = 5;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(614, 61);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(89, 20);
-            this.textBox3.TabIndex = 6;
-            // 
-            // from
-            // 
-            this.from.AutoSize = true;
-            this.from.Location = new System.Drawing.Point(578, 64);
-            this.from.Name = "from";
-            this.from.Size = new System.Drawing.Size(33, 13);
-            this.from.TabIndex = 7;
-            this.from.Text = "From:";
             // 
             // to
             // 
             this.to.AutoSize = true;
-            this.to.Location = new System.Drawing.Point(732, 64);
+            this.to.Location = new System.Drawing.Point(746, 49);
             this.to.Name = "to";
             this.to.Size = new System.Drawing.Size(23, 13);
             this.to.TabIndex = 8;
             this.to.Text = "To:";
             // 
-            // btnLoad
+            // textBox2
             // 
-            this.btnLoad.Location = new System.Drawing.Point(581, 12);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(97, 23);
-            this.btnLoad.TabIndex = 9;
-            this.btnLoad.Text = "Cargar Datos";
-            this.btnLoad.UseVisualStyleBackColor = true;
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            this.textBox2.Location = new System.Drawing.Point(761, 66);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(89, 20);
+            this.textBox2.TabIndex = 5;
             // 
-            // path
+            // from
             // 
-            this.path.AutoSize = true;
-            this.path.Location = new System.Drawing.Point(699, 17);
-            this.path.Name = "path";
-            this.path.Size = new System.Drawing.Size(0, 13);
-            this.path.TabIndex = 10;
+            this.from.AutoSize = true;
+            this.from.Location = new System.Drawing.Point(593, 49);
+            this.from.Name = "from";
+            this.from.Size = new System.Drawing.Size(33, 13);
+            this.from.TabIndex = 7;
+            this.from.Text = "From:";
+            this.from.Click += new System.EventHandler(this.from_Click);
             // 
-            // agregarInfectados
+            // textBox3
             // 
-            this.agregarInfectados.Location = new System.Drawing.Point(899, 75);
-            this.agregarInfectados.Name = "agregarInfectados";
-            this.agregarInfectados.Size = new System.Drawing.Size(100, 23);
-            this.agregarInfectados.TabIndex = 11;
-            this.agregarInfectados.Text = "Ubicar Infectados";
-            this.agregarInfectados.UseVisualStyleBackColor = true;
-            this.agregarInfectados.Click += new System.EventHandler(this.agregarInfectados_Click);
+            this.textBox3.Location = new System.Drawing.Point(631, 67);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(89, 20);
+            this.textBox3.TabIndex = 6;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // UserInterface
             // 
@@ -202,15 +205,15 @@
         private GMap.NET.WindowsForms.GMapControl gMap;
         private System.Windows.Forms.DataGridView tablaDatos;
         private System.Windows.Forms.ComboBox campos;
-        private System.Windows.Forms.ComboBox categorico;
-        private System.Windows.Forms.TextBox cadena;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label from;
-        private System.Windows.Forms.Label to;
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Label path;
         private System.Windows.Forms.Button agregarInfectados;
+        private System.Windows.Forms.ComboBox categorico;
+        private System.Windows.Forms.TextBox cadena;
+        private System.Windows.Forms.Label to;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label from;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
 

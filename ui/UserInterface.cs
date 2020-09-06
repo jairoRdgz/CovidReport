@@ -209,5 +209,15 @@ namespace Taller_2
         {
             gMap.Overlays.Add(markers);
         }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void from_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
