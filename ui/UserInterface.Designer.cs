@@ -40,6 +40,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.from = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.buttonFiltro = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,7 +115,7 @@
             // 
             // agregarInfectados
             // 
-            this.agregarInfectados.Location = new System.Drawing.Point(883, 64);
+            this.agregarInfectados.Location = new System.Drawing.Point(608, 63);
             this.agregarInfectados.Name = "agregarInfectados";
             this.agregarInfectados.Size = new System.Drawing.Size(100, 23);
             this.agregarInfectados.TabIndex = 11;
@@ -143,7 +144,7 @@
             // to
             // 
             this.to.AutoSize = true;
-            this.to.Location = new System.Drawing.Point(746, 49);
+            this.to.Location = new System.Drawing.Point(885, 15);
             this.to.Name = "to";
             this.to.Size = new System.Drawing.Size(23, 13);
             this.to.TabIndex = 8;
@@ -151,7 +152,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(761, 66);
+            this.textBox2.Location = new System.Drawing.Point(900, 32);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(89, 20);
             this.textBox2.TabIndex = 5;
@@ -159,7 +160,7 @@
             // from
             // 
             this.from.AutoSize = true;
-            this.from.Location = new System.Drawing.Point(593, 49);
+            this.from.Location = new System.Drawing.Point(732, 15);
             this.from.Name = "from";
             this.from.Size = new System.Drawing.Size(33, 13);
             this.from.TabIndex = 7;
@@ -168,17 +169,28 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(631, 67);
+            this.textBox3.Location = new System.Drawing.Point(770, 33);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(89, 20);
             this.textBox3.TabIndex = 6;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // buttonFiltro
+            // 
+            this.buttonFiltro.Location = new System.Drawing.Point(900, 62);
+            this.buttonFiltro.Name = "buttonFiltro";
+            this.buttonFiltro.Size = new System.Drawing.Size(89, 24);
+            this.buttonFiltro.TabIndex = 12;
+            this.buttonFiltro.Text = "Filtrar";
+            this.buttonFiltro.UseVisualStyleBackColor = true;
+            this.buttonFiltro.Click += new System.EventHandler(this.button1_Click);
             // 
             // UserInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1025, 450);
+            this.Controls.Add(this.buttonFiltro);
             this.Controls.Add(this.agregarInfectados);
             this.Controls.Add(this.cadena);
             this.Controls.Add(this.path);
@@ -214,6 +226,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label from;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button buttonFiltro;
     }
 }
 

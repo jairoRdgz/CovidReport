@@ -33,6 +33,11 @@ namespace Taller_2
             initializeTable();
             categorico.Hide();
             cadena.Hide();
+            textBox2.Hide();
+            textBox3.Hide();
+            from.Hide();
+            to.Hide();
+            buttonFiltro.Hide();
         }
 
         private void btnLoad_Click(object sender, EventArgs e)
@@ -123,18 +128,33 @@ namespace Taller_2
             switch (cases)
             {
                 case "Ciudad":
+                    textBox2.Hide();
+                    textBox3.Hide();
+                    from.Hide();
+                    to.Hide();
+                    buttonFiltro.Hide();
                     cadena.Show();
                     cadena.Clear();
                     categorico.Hide();
                     ciudadChoosen = true;
                     break;
                 case "Departamento":
+                    textBox2.Hide();
+                    textBox3.Hide();
+                    from.Hide();
+                    to.Hide();
+                    buttonFiltro.Hide();
                     cadena.Show();
                     cadena.Clear();
                     categorico.Hide();
                     ciudadChoosen = false;
                     break;
                 case "Atencion":
+                    textBox2.Hide();
+                    textBox3.Hide();
+                    from.Hide();
+                    to.Hide();
+                    buttonFiltro.Hide();
                     chooseSexo = false;
                     cadena.Hide();
                     cadena.Clear();
@@ -143,9 +163,19 @@ namespace Taller_2
                     fillAtencion();
                     break;
                 case "Edad":
+                    buttonFiltro.Show();
+                    textBox2.Show();
+                    textBox3.Show();
+                    from.Show();
+                    to.Show();
                     //Uds Veran como demonios hacen esta
                     break;
                 case "Sexo":
+                    textBox2.Hide();
+                    textBox3.Hide();
+                    from.Hide();
+                    to.Hide();
+                    buttonFiltro.Hide();
                     chooseSexo = true;
                     cadena.Hide();
                     cadena.Clear();
@@ -154,6 +184,11 @@ namespace Taller_2
                     fillSexo();
                     break;
                 default:
+                    textBox2.Hide();
+                    textBox3.Hide();
+                    from.Hide();
+                    to.Hide();
+                    buttonFiltro.Hide();
                     categorico.Hide();
                     categorico.Items.Clear();
                     cadena.Hide();
@@ -218,6 +253,30 @@ namespace Taller_2
         private void from_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            /*int fromT = int.Parse(textBox2.Text);
+            int toT = int.Parse(textBox3.Text);
+
+            tablaDatos.Rows.Clear();
+
+            foreach (var item in list.getDatos())
+            {
+                if (int.Parse(item.getEdad()) >= fromT && int.Parse(item.getEdad()) <= toT)
+                {
+                    DataRow row = table.NewRow();
+                    row[0] = item.getCiudad();
+                    row[1] = item.getDepartamento();
+                    row[2] = item.getAtencion();
+                    row[3] = item.getEdad();
+                    row[4] = item.getSexo();
+
+                    table.Rows.Add(row);
+                }
+            }
+            */
         }
     }
 }

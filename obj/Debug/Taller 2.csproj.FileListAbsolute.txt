@@ -73,3 +73,28 @@ C:\Users\Juan\Documents\Universidad Icesi\Semestre 6\Proyecto Integrador\Proyect
 C:\Users\Juan\Documents\Universidad Icesi\Semestre 6\Proyecto Integrador\Proyectos C#\CovidReport\obj\Debug\Taller 2.csproj.CopyComplete
 C:\Users\Juan\Documents\Universidad Icesi\Semestre 6\Proyecto Integrador\Proyectos C#\CovidReport\obj\Debug\Taller 2.exe
 C:\Users\Juan\Documents\Universidad Icesi\Semestre 6\Proyecto Integrador\Proyectos C#\CovidReport\obj\Debug\Taller 2.pdb
+C:\Users\Alejandro Suarez\Documents\Integrador\CovidReport\bin\Debug\Taller 2.exe.config
+C:\Users\Alejandro Suarez\Documents\Integrador\CovidReport\bin\Debug\Taller 2.exe
+C:\Users\Alejandro Suarez\Documents\Integrador\CovidReport\bin\Debug\Taller 2.pdb
+C:\Users\Alejandro Suarez\Documents\Integrador\CovidReport\bin\Debug\EntityFramework.dll
+C:\Users\Alejandro Suarez\Documents\Integrador\CovidReport\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Alejandro Suarez\Documents\Integrador\CovidReport\bin\Debug\GMap.NET.Core.dll
+C:\Users\Alejandro Suarez\Documents\Integrador\CovidReport\bin\Debug\GMap.NET.WindowsForms.dll
+C:\Users\Alejandro Suarez\Documents\Integrador\CovidReport\bin\Debug\GMap.NET.WindowsPresentation.dll
+C:\Users\Alejandro Suarez\Documents\Integrador\CovidReport\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Alejandro Suarez\Documents\Integrador\CovidReport\bin\Debug\System.Data.SQLite.dll
+C:\Users\Alejandro Suarez\Documents\Integrador\CovidReport\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Alejandro Suarez\Documents\Integrador\CovidReport\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Alejandro Suarez\Documents\Integrador\CovidReport\bin\Debug\EntityFramework.xml
+C:\Users\Alejandro Suarez\Documents\Integrador\CovidReport\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Alejandro Suarez\Documents\Integrador\CovidReport\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Alejandro Suarez\Documents\Integrador\CovidReport\bin\Debug\System.Data.SQLite.xml
+C:\Users\Alejandro Suarez\Documents\Integrador\CovidReport\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\Alejandro Suarez\Documents\Integrador\CovidReport\obj\Debug\Taller 2.csprojAssemblyReference.cache
+C:\Users\Alejandro Suarez\Documents\Integrador\CovidReport\obj\Debug\Taller_2.UserInterface.resources
+C:\Users\Alejandro Suarez\Documents\Integrador\CovidReport\obj\Debug\Taller_2.Properties.Resources.resources
+C:\Users\Alejandro Suarez\Documents\Integrador\CovidReport\obj\Debug\Taller 2.csproj.GenerateResource.cache
+C:\Users\Alejandro Suarez\Documents\Integrador\CovidReport\obj\Debug\Taller 2.csproj.CoreCompileInputs.cache
+C:\Users\Alejandro Suarez\Documents\Integrador\CovidReport\obj\Debug\Taller 2.csproj.CopyComplete
+C:\Users\Alejandro Suarez\Documents\Integrador\CovidReport\obj\Debug\Taller 2.exe
+C:\Users\Alejandro Suarez\Documents\Integrador\CovidReport\obj\Debug\Taller 2.pdb
