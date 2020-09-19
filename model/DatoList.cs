@@ -11,6 +11,8 @@ namespace Taller_2.model
         private List<Dato> datos;
 
         private List<string> ciudades;
+        private List<string> departamentos;
+        private List<int> departamentValues;
 
         public DatoList()
         {
@@ -49,6 +51,42 @@ namespace Taller_2.model
             }
             ciudades.Sort();
 
+        }
+        
+        public List<string> getDepartamentos()
+        {
+            return departamentos;
+        }
+
+        public List<int> getDepartamentValues()
+        {
+            return departamentValues;
+        }
+       
+        public void setDepartments()
+        {
+            
+            departamentos = new List<string>();
+            departamentValues = new List<int>();
+            
+            foreach (var item in datos)
+            {
+
+                if (!departamentos.Contains(item.getDepartamento()))
+                {
+                    departamentos.Add(item.getDepartamento());
+                    departamentValues.Add(0);
+                    
+                }
+
+                for (int i = 0; i < departamentos.Count(); i++)
+                {
+                    if(item.getDepartamento() == departamentos[i])
+                    {
+                        departamentValues[i] = departamentValues.ElementAt<int>(i) + 1;
+                    }
+                }
+            }
         }
 
     }
